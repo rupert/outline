@@ -8,7 +8,7 @@ WORKDIR $APP_PATH
 COPY package.json ./
 COPY yarn.lock ./
 
-RUN yarn --pure-lockfile
+RUN yarn --pure-lockfile --network-timeout 300000
 
 COPY . .
 
